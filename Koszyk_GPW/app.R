@@ -2,7 +2,12 @@ library(shiny)
 
 ui <- fluidPage(
     checkboxGroupInput(inputId = "wybrane", label = "Wybierz spółki z WIG20 do wyliczenia korelacji",
-                       choices = nazwy, selected = nazwy),
+                       choices = c("WIG20", "ALIOR", "CCC", "CDPROJEKT", "CYFRPLSAT", "DINOPL", "JSW", "KGHM",
+                                   "LPP", "LOTOS", "MBANK", "ORANGEPL", "PEKAO", "PGE", "PGNIG", "PKNORLEN",
+                                   "PKOBP", "PLAY", "PZU", "SANPL", "TAURONPE"),
+                       selected = c("WIG20", "ALIOR", "CCC", "CDPROJEKT", "CYFRPLSAT", "DINOPL", "JSW", "KGHM",
+                                    "LPP", "LOTOS", "MBANK", "ORANGEPL", "PEKAO", "PGE", "PGNIG", "PKNORLEN",
+                                    "PKOBP", "PLAY", "PZU", "SANPL", "TAURONPE")),
     plotOutput("korel")
 )
 
